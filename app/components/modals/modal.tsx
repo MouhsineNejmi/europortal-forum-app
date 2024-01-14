@@ -29,7 +29,7 @@ const Modal = ({
 	return (
 		<Dialog>
 			<DialogTrigger asChild>
-				<Button variant='outline'>{triggerTitle}</Button>
+				<Button variant='default'>{triggerTitle}</Button>
 			</DialogTrigger>
 			<DialogContent className='sm:max-w-[425px]'>
 				<DialogHeader>

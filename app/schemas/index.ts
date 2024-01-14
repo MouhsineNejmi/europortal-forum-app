@@ -34,3 +34,9 @@ export const CreateDiscussion = z.object({
 		message: "Description is required",
 	}),
 });
+
+export const AddReply = z.object({
+	message: z.string().min(1, {
+		message: "Reply must be at least 1 character minimun",
+	}),
+});

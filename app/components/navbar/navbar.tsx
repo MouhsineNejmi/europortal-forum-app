@@ -20,9 +20,9 @@ const Navbar = ({ currentUser }: INavbarProps) => {
 			</Link>
 
 			<div className='flex items-center gap-2'>
-				<DiscussionModal />
-				<UserMenu currentUser={currentUser} />
+				<DiscussionModal currentUser={currentUser} />
 				<ModeToggle />
+				<UserMenu currentUser={currentUser} />
 			</div>
 		</nav>
 	);

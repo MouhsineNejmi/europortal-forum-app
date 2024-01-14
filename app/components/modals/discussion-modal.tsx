@@ -22,8 +22,13 @@ import FormError from "@/components/form-error";
 import FormSuccess from "@/components/form-success";
 
 import { CreateDiscussion } from "@/schemas";
+import { User } from "@prisma/client";
 
-const DiscussionModal = () => {
+interface IDiscussionModalProps {
+	currentUser?: User | null;
+}
+
+const DiscussionModal = ({ currentUser }: IDiscussionModalProps) => {
 	const router = useRouter();
 	const [error, setError] = React.useState<string>();
 	const [success, setSuccess] = React.useState<string>();
@@ -36,6 +41,10 @@ const DiscussionModal = () => {
 			description: "",
 		},
 	});
+
+	if (!currentUser) {
+		return <Button onClick={() => router.push("/login")}>Login</Button>;
+	}
 
 	const onSubmit = (values: z.infer<typeof CreateDiscussion>) => {
 		setIsLoading(true);
@@ -110,7 +119,7 @@ const DiscussionModal = () => {
 
 				<Button disabled={isLoading} type='submit' className='w-full space-x-2'>
 					{isLoading && <ReloadIcon className='animate-spin' />}
-					Create Discussion
+					Ask A Question
 				</Button>
 			</form>
 		</Form>
@@ -118,7 +127,7 @@ const DiscussionModal = () => {
 
 	return (
 		<Modal
-			triggerTitle='Create Discussion'
+			triggerTitle='Ask A Question'
 			title='Start New Discussion'
 			description='Fill the form below to get you started'
 			bodyContent={bodyContent}

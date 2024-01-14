@@ -13,7 +13,7 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Avatar from "@/components/Avatar";
+import Avatar from "@/components/avatar";
 
 interface IUserMenuProps {
 	currentUser?: User | null;
@@ -47,9 +47,9 @@ const UserMenu = ({ currentUser }: IUserMenuProps) => {
 				{currentUser ? (
 					<DropdownMenuContent>
 						<DropdownMenuLabel>My Account</DropdownMenuLabel>
-						<DropdownMenuSeparator />
+						{/* <DropdownMenuSeparator />
 						<DropdownMenuItem>Profile</DropdownMenuItem>
-						<DropdownMenuItem>My Discussions</DropdownMenuItem>
+						<DropdownMenuItem>My Discussions</DropdownMenuItem> */}
 						<DropdownMenuSeparator />
 						<DropdownMenuItem onClick={logout}>Logout</DropdownMenuItem>
 					</DropdownMenuContent>

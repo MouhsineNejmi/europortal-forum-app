@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/context/theme-provider";
 import getCurrentUser from "@/actions/getCurrentUser";
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/navbar/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default async function RootLayout({
 					disableTransitionOnChange
 				>
 					<Navbar currentUser={currentUser} />
+					<Toaster />
 					{children}
 				</ThemeProvider>
 			</body>
