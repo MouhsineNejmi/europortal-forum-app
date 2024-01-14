@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Forum Application
+
+This is a forum application implemented using Next.js, NestJS (backend), TypeScript, Shadcn UI library, NextAuth, Tailwind CSS, Prisma, Date-fns, and Zod.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Folder Structure](#folder-structure)
+- [Tech Stack](#tech-stack)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+These instructions will help you set up and run the forum application on your local machine for development and testing purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have the following installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js
+- npm or yarn
+- Database (e.g., PostgreSQL)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Installation
 
-## Learn More
+1. **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/MouhsineNejmi/europortal-forum-app
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Navigate to the project folder:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   cd europortal-forum-app
+   ```
 
-## Deploy on Vercel
+3. **Install dependencies:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
+   The application should now be running on http://localhost:3000.
+
+<br />
+
+# Usage
+
+- Access the forum at [http://localhost:3000](http://localhost:3000).
+- Users can view/start discussions and reply.
+- Moderators can delete discussions and replies.
+
+<br />
+
+# Features
+
+- List discussions on landing.
+- Users start discussions with a heading/description.
+- Discussions show user details, creation time, and replies.
+- Users can reply to discussions.
+- Moderators can delete discussions and replies.
+- Auth using NextAuth.
+
+<br />
+
+# Tech Stack
+
+- **Next.js:** React framework.
+- **Shadcn UI:** Design UI component library.
+- **NextAuth:** User authentication and authorization.
+- **Prisma:** Database ORM.
+  - Chosen for its powerful and type-safe query capabilities, providing a seamless interaction with databases.
+- **Date-fns:** Library for date formatting.
+- **Zod:** Library for data validation.
+- **Tailwind CSS:** Styling.
