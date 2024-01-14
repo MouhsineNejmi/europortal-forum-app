@@ -21,6 +21,7 @@ model User {
   updatedAt DateTime  @updatedAt
 
   discussions Discussion[]
+  replies Reply[]
 }
 
 model Discussion {
@@ -44,4 +45,5 @@ model Reply {
   updatedAt     DateTime    @updatedAt
 
   discussion    Discussion  @relation(fields: [discussionId], references: [id], onDelete: Cascade)
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

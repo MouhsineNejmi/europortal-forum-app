@@ -13,7 +13,7 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Avatar from "@/components/Avatar";
 
 interface IUserMenuProps {
 	currentUser?: User | null;
@@ -32,21 +32,14 @@ const UserMenu = ({ currentUser }: IUserMenuProps) => {
 			<DropdownMenu>
 				<DropdownMenuTrigger>
 					{currentUser ? (
-						<Avatar className='w-8 h-8'>
-							<AvatarImage
-								src={currentUser.image as string}
-								alt={currentUser.username}
-							/>
-							<AvatarFallback>{currentUser.username}</AvatarFallback>
-						</Avatar>
+						<Avatar
+							className='w-8 h-8'
+							src={currentUser.image as string}
+							alt={currentUser.username}
+						/>
 					) : (
 						<div className='flex gap-x-2 items-center'>
-							<Avatar className='w-6 h-6'>
-								<AvatarImage
-									src='https://gravatar.com/avatar/ac447fc970080acc58f3fad587cd61c7?s=400&d=mp&r=x'
-									alt=''
-								/>
-							</Avatar>
+							<Avatar className='w-6 h-6' />
 							<HamburgerMenuIcon />
 						</div>
 					)}
