@@ -1,8 +1,8 @@
 "use client";
 
-const Home = () => {
+const Home = async () => {
 	return (
-		<div>
+		<div className='container'>
 			<h1>Forum App</h1>
 		</div>
 	);
